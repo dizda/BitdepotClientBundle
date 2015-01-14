@@ -1,0 +1,35 @@
+{
+    "name": "dizda/coinegger-client-bundle",
+    "type": "library",
+    "description": "A Symfony2 bundle to interoperate with the Coinegger bitcoin wallet.",
+    "keywords": ["bitcoin", "coinegger", "wallet"],
+    "homepage": "https://github.com/dizda",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Dizdarevic",
+            "email": "dizzda@gmail.com",
+            "homepage": "https://github.com/dizda"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/framework-bundle": "~2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.1"
+    },
+    "suggest": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Dizda\\CoineggerClientBundle\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.x-dev"
+        }
+    }
+}

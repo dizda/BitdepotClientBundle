@@ -1,0 +1,4 @@
+dizda_coinegger_client:
+    resource: "@DizdaCoineggerClientBundle/Controller/"
+    type:     annotation
+    prefix:   /
