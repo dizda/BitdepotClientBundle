@@ -13,6 +13,12 @@ Install with Composer
 
 ## Configuration
 
+To active hooks, you must update your `routing.yml`:
+
+    dizda_coinegger_client:
+        resource: "@DizdaCoineggerClientBundle/Resources/config/routing.yml"
+        prefix:   /callback
+
 Add this to your `config.yml`:
 
     dizda_coinegger_client:
