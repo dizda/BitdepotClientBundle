@@ -12,21 +12,21 @@ class CallbackEvent extends Event
     /**
      * @var array
      */
-    private $callback;
+    private $data;
 
     /**
-     * @param array $callback
+     * @param array $data
      */
-    public function __construct(array $callback)
+    public function __construct(array $data)
     {
-        $this->callback = $callback;
+        $this->data = $data;
     }
 
     /**
      * @return array
      */
-    public function getCallback()
+    public function getData()
     {
-        return $this->callback;
+        return $this->data;
     }
 }

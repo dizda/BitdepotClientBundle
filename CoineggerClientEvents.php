@@ -19,5 +19,5 @@ final class CoineggerClientEvents
     /**
      * When the Coinegger wallet trigger a deposit
      */
-    const DEPOSIT_CALLBACK = 'coinegger_client.deposit_callback';
+    const DEPOSIT_CALLBACK = 'dizda_coinegger_client.deposit_callback';
 }
