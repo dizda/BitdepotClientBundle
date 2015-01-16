@@ -15,17 +15,20 @@ Install with Composer
 
 To active hooks, you must update your `routing.yml`:
 
-    dizda_coinegger_client:
-        resource: "@DizdaCoineggerClientBundle/Resources/config/routing.yml"
-        prefix:   /callback # don't forget to restrict the path you specify in your security.yml
-
+```yaml
+dizda_coinegger_client:
+    resource: "@DizdaCoineggerClientBundle/Resources/config/routing.yml"
+    prefix:   /callback # don't forget to restrict the path you specify in your security.yml
+```
 
 Add this to your `config.yml`:
 
-    dizda_coinegger_client:
-        base_url:   %coinegger_endpoint%    # Correspond to the coinegger api server
-        app_id:     %coinegger_app_id%
-        app_secret: %coinegger_app_secret%
+```yaml
+dizda_coinegger_client:
+    base_url:   %coinegger_endpoint%    # Correspond to the coinegger api server
+    app_id:     %coinegger_app_id%
+    app_secret: %coinegger_app_secret%
+```
 
 ## Listeners
 
@@ -65,7 +68,7 @@ class DepositListener
         }
 
         if ($data['is_overfilled'] === true) {
-            $this->logger->warning('The deposit has been overfilled.', [ $data['id'] ]);
+            // do something
         }
 
         // The deposit was notified to be successful, so you can do your stuff there
