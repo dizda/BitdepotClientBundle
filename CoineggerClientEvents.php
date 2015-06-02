@@ -20,4 +20,9 @@ final class CoineggerClientEvents
      * When the Coinegger wallet trigger a deposit
      */
     const DEPOSIT_CALLBACK = 'dizda_coinegger_client.deposit_callback';
+
+    /**
+     * When the Coinegger API trigger a withdraw
+     */
+    const WITHDRAW_OUTPUT_CALLBACK = 'dizda_coinegger_client.withdraw_output_callback';
 }

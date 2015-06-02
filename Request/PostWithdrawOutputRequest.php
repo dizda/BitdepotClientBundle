@@ -6,11 +6,11 @@ use Dizda\CoineggerClientBundle\Request\AbstractRequest;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
- * Class PostDepositExpectedRequest
+ * Class PostWithdrawOutputRequest
  *
  * @author Jonathan Dizdarevic <dizda@dizda.fr>
  */
-class PostDepositExpectedRequest extends AbstractRequest
+class PostWithdrawOutputRequest extends AbstractRequest
 {
     /**
      * {@inheritdoc}
@@ -28,24 +28,22 @@ class PostDepositExpectedRequest extends AbstractRequest
         parent::setDefaultOptions($resolver);
 
         $resolver->setRequired(array(
-            'id',
-            'amount_expected',
-            'amount_filled',
-            'is_fulfilled',
-            'is_overfilled',
+            'amount',
+            'to_address',
+            'withdraw',
+            'reference'
         ));
 
         $resolver->setDefined(array(
-            'address_external'
+            'id'
         ));
 
         $resolver->setAllowedTypes(array(
-            'id'               => ['integer'],
-            'amount_expected'  => ['string'],
-            'amount_filled'    => ['string'],
-            'is_fulfilled'     => ['bool'],
-            'is_overfilled'    => ['bool'],
-            'address_external' => ['array']
+            'id'         => ['integer'],
+            'amount'     => ['string'],
+            'to_address' => ['string'],
+            'withdraw'   => ['array'],
+            'reference'  => ['string']
         ));
     }
 }
