@@ -3,7 +3,7 @@ BitdepotClientBundle - Work In Progress
 
 When bitcoin meet Arnold Schwarzenegger.
 
-See the [API Project](https://github.com/dizda/Bitdepot).
+See the [API Project](https://github.com/dizda/bitdepot).
 
 ## Setup
 
