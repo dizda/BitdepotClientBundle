@@ -1,15 +1,15 @@
 <?php
 
-namespace Dizda\CoineggerClientBundle\Service;
+namespace Dizda\BitdepotClientBundle\Service;
 
-use Dizda\CoineggerClientBundle\Client\WSSEClient;
+use Dizda\BitdepotClientBundle\Client\WSSEClient;
 
 /**
- * Class CoineggerClient
+ * Class BitdepotClient
  *
  * @author Jonathan Dizdarevic <dizda@dizda.fr>
  */
-class CoineggerClient
+class BitdepotClient
 {
     /**
      * @var WSSEClient

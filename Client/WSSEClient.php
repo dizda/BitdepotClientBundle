@@ -1,6 +1,6 @@
 <?php
 
-namespace Dizda\CoineggerClientBundle\Client;
+namespace Dizda\BitdepotClientBundle\Client;
 
 use GuzzleHttp\Client;
 use Devster\GuzzleHttp\Subscriber\WsseAuth;

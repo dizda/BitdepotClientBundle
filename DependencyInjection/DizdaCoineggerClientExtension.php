@@ -1,6 +1,6 @@
 <?php
 
-namespace Dizda\CoineggerClientBundle\DependencyInjection;
+namespace Dizda\BitdepotClientBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class DizdaCoineggerClientExtension extends Extension
+class DizdaBitdepotClientExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -26,7 +26,7 @@ class DizdaCoineggerClientExtension extends Extension
         $loader->load('services.xml');
 
         foreach ($config as $k => $v) {
-            $container->setParameter('dizda_coinegger_client.' . $k, $v);
+            $container->setParameter('dizda_bitdepot_client.' . $k, $v);
         }
     }
 }

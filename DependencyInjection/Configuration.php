@@ -1,6 +1,6 @@
 <?php
 
-namespace Dizda\CoineggerClientBundle\DependencyInjection;
+namespace Dizda\BitdepotClientBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('dizda_coinegger_client');
+        $rootNode = $treeBuilder->root('dizda_bitdepot_client');
 
         $rootNode
             ->children()

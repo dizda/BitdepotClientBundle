@@ -1,8 +1,8 @@
 {
-    "name": "dizda/coinegger-client-bundle",
+    "name": "dizda/bitdepot-client-bundle",
     "type": "library",
-    "description": "A Symfony2 bundle to interoperate with the Coinegger bitcoin wallet.",
-    "keywords": ["bitcoin", "coinegger", "wallet"],
+    "description": "A Symfony2 bundle to interoperate with the Bitdepot bitcoin wallet.",
+    "keywords": ["bitcoin", "bitdepot", "wallet"],
     "homepage": "https://github.com/dizda",
     "license": "MIT",
     "authors": [
@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dizda\\CoineggerClientBundle\\": ""
+            "Dizda\\BitdepotClientBundle\\": ""
         }
     },
     "extra": {

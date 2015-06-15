@@ -1,6 +1,6 @@
 <?php
 
-namespace Dizda\CoineggerClientBundle\Controller;
+namespace Dizda\BitdepotClientBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

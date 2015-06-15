@@ -1,4 +1,4 @@
-dizda_coinegger_client:
-    resource: "@DizdaCoineggerClientBundle/Controller/"
+dizda_bitdepot_client:
+    resource: "@DizdaBitdepotClientBundle/Controller/"
     type:     annotation
     prefix:   /
