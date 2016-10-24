@@ -1,8 +1,8 @@
 <?php
 
-namespace Dizda\CoineggerClientBundle\Request;
+namespace Dizda\BitdepotClientBundle\Request;
 
-use Dizda\CoineggerClientBundle\Request\AbstractRequest;
+use Dizda\BitdepotClientBundle\Request\AbstractRequest;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**

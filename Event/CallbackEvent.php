@@ -1,6 +1,6 @@
 <?php
 
-namespace Dizda\CoineggerClientBundle\Event;
+namespace Dizda\BitdepotClientBundle\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 

@@ -27,7 +27,7 @@ class WithdrawController extends Controller
     {
         $callback = (new PostWithdrawOutputRequest($request->request->all()))->getAttributes();
 
-        $this->get('event_dispatcher')->dispatch(CoineggerClientEvents::WITHDRAW_OUTPUT_CALLBACK, new CallbackEvent($callback));
+        $this->get('event_dispatcher')->dispatch(BitdepotClientEvents::WITHDRAW_OUTPUT_CALLBACK, new CallbackEvent($callback));
 
         return [];
     }

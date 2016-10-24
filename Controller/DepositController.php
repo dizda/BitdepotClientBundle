@@ -2,9 +2,9 @@
 
 namespace Dizda\BitdepotClientBundle\Controller;
 
-use Dizda\CoineggerClientBundle\CoineggerClientEvents;
-use Dizda\CoineggerClientBundle\Event\CallbackEvent;
-use Dizda\CoineggerClientBundle\Request\PostDepositExpectedRequest;
+use Dizda\BitdepotClientBundle\BitdepotClientEvents;
+use Dizda\BitdepotClientBundle\Event\CallbackEvent;
+use Dizda\BitdepotClientBundle\Request\PostDepositExpectedRequest;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -28,7 +28,7 @@ class DepositController extends Controller
     {
         $callback = (new PostDepositExpectedRequest($request->request->all()))->getAttributes();
 
-        $this->get('event_dispatcher')->dispatch(CoineggerClientEvents::DEPOSIT_CALLBACK, new CallbackEvent($callback));
+        $this->get('event_dispatcher')->dispatch(BitdepotClientEvents::DEPOSIT_CALLBACK, new CallbackEvent($callback));
 
         return [];
     }
