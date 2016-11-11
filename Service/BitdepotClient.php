@@ -26,8 +26,29 @@ class BitdepotClient
     {
         $response = $this->client->post('deposits.json', [
             'type'            => 1,
-            'amount_expected' => $amountExpected,
-            'reference'       => $reference
+            'amount_expected' => (string) $amountExpected,
+            'reference'       => (string) $reference
+        ]);
+
+        return $response;
+    }
+
+    /**
+     * @param string      $amountExpected
+     * @param string      $currency
+     * @param string|null $reference
+     *
+     * @return array
+     */
+    public function createFiatDeposit($amountExpected, $currency, $reference = null)
+    {
+        $response = $this->client->post('deposits.json', [
+            'type'            => 1,
+            'amount_expected_fiat' => [
+                'amount'   => (string) $amountExpected,
+                'currency' => (string) $currency
+            ],
+            'reference'       => (string) $reference
         ]);
 
         return $response;
@@ -45,9 +66,9 @@ class BitdepotClient
     public function withdraw($amount, $address, $reference)
     {
         $response = $this->client->post('withdraw/outputs', [
-            'amount'     => $amount,
-            'to_address' => $address,
-            'reference'  => $reference
+            'amount'     => (string) $amount,
+            'to_address' => (string) $address,
+            'reference'  => (string) $reference
         ]);
 
         return $response;
