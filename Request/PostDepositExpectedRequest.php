@@ -33,6 +33,7 @@ class PostDepositExpectedRequest extends AbstractRequest
             'amount_filled',
             'is_fulfilled',
             'is_overfilled',
+            'reference'
         ));
 
         $resolver->setDefined(array(
@@ -45,7 +46,8 @@ class PostDepositExpectedRequest extends AbstractRequest
             'amount_filled'    => ['string'],
             'is_fulfilled'     => ['bool'],
             'is_overfilled'    => ['bool'],
-            'address_external' => ['array']
+            'address_external' => ['array'],
+            'reference'        => ['string']
         ));
     }
 }
