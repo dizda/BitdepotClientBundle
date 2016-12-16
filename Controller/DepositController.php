@@ -8,7 +8,9 @@ use Dizda\BitdepotClientBundle\Request\PostDepositExpectedRequest;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 /**
@@ -30,6 +32,6 @@ class DepositController extends Controller
 
         $this->get('event_dispatcher')->dispatch(BitdepotClientEvents::DEPOSIT_CALLBACK, new CallbackEvent($callback));
 
-        return [];
+        return JsonResponse::create([], Response::HTTP_OK);
     }
 }
