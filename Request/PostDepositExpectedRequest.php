@@ -40,14 +40,12 @@ class PostDepositExpectedRequest extends AbstractRequest
             'address_external'
         ));
 
-        $resolver->setAllowedTypes(array(
-            'id'               => ['integer'],
-            'amount_expected'  => ['string'],
-            'amount_filled'    => ['string'],
-            'is_fulfilled'     => ['bool'],
-            'is_overfilled'    => ['bool'],
-            'address_external' => ['array'],
-            'reference'        => ['string']
-        ));
+        $resolver->setAllowedTypes('id', 'integer');
+        $resolver->setAllowedTypes('amount_expected', 'string');
+        $resolver->setAllowedTypes('amount_filled', 'string');
+        $resolver->setAllowedTypes('is_fulfilled', 'bool');
+        $resolver->setAllowedTypes('is_overfilled', 'bool');
+        $resolver->setAllowedTypes('address_external', 'array');
+        $resolver->setAllowedTypes('reference', 'string');
     }
 }

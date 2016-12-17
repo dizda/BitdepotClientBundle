@@ -38,12 +38,10 @@ class PostWithdrawOutputRequest extends AbstractRequest
             'id'
         ));
 
-        $resolver->setAllowedTypes(array(
-            'id'         => ['integer'],
-            'amount'     => ['string'],
-            'to_address' => ['string'],
-            'withdraw'   => ['array'],
-            'reference'  => ['string']
-        ));
+        $resolver->setAllowedTypes('id', 'integer');
+        $resolver->setAllowedTypes('amount', 'string');
+        $resolver->setAllowedTypes('to_address', 'string');
+        $resolver->setAllowedTypes('withdraw', 'array');
+        $resolver->setAllowedTypes('reference', 'string');
     }
 }
